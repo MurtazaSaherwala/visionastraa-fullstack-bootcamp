@@ -9,12 +9,6 @@ Students created their first structured web page using semantic HTML and enhance
 
 ---
 
-## ⏱ Hours Worked
-
-_Not required for Day 1._
-
----
-
 ## 🔗 Reference Links
 
 The following resources were referenced or are recommended for further reading:
