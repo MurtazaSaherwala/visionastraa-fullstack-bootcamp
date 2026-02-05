@@ -1,116 +1,23 @@
-/* CSS Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Global styles */
 body {
   font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background: #f5f5f5;
-  color: #333;
-}
-
-/* Header */
-header {
-  background: black;
-  color: white;
-  padding: 20px 40px;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  margin-left: 20px;
-  font-size: 14px;
-}
-
-/* Hero section */
-.hero{
-    height: 80vh;
-    background: linear-gradient(to right, #000, #333);
-    color : #f5f5f5;
-
-    display: flex;
-    align-items: center;
-}
-
-.hero-content {
-    padding-left: 80px;
-    max-width: 600px
-}
-
-.hero h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 18px;
-    margin-bottom: 30px;
-    color: #cccccc
+  background-color: #ffffff;
+  color: #000000;
+  padding: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 button {
-    padding: 14px 28px;
-    background: #00c853;
-    border: none;
-    color: white;
-    font-size: 16px;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-    margin-bottom: 20px;
-}
-button:hover {
-    background: #00a855;
+  margin-top: 10px;
+  padding: 8px 16px;
+  cursor: pointer;
 }
 
-/* Features section */
-.features {
-  padding: 40px;
-  background: white;
-  text-align: center;
+input {
+  padding: 6px;
+  margin-right: 8px;
 }
 
-.feature-list {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 30px;
-}
-
-.feature {
-  background: #e0e0e0;
-  padding: 20px;
-  width: 200px;
-  border-radius: 8px;
-}
-
-/* Info section */
-.info {
-  padding: 60px;
-  text-align: center;
-}
-
-.info h2 {
-  margin-bottom: 20px;
-}
-
-.info p {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-/* Footer */
-footer {
-  background: black;
-  color: white;
-  text-align: center;
-  padding: 20px;
+.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
 }

@@ -1,50 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Future EV</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Day 2 - JavaScript Interactions</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
-  <header>
-    <h1>Future EV</h1>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">Features</a>
-    </nav>
-  </header>
+  <h2>EV Battery Range Calculator</h2>
 
-  <section class="hero">
-    <div class="hero-content">
-        <h2>Drive the Future</h2>
-        <p>The future of electric vehicles starts here.</p>
-        <button>Book Test Drive</button>
-    </div>
-  </section>
+  <input
+    type="number"
+    id="batteryInput"
+    placeholder="Enter battery percentage"
+  />
 
-  <section class="features">
-    <h2>Why Choose Future EV?</h2>
+  <button id="calculateBtn">Calculate Range</button>
 
-    <div class="feature-list">
-      <div class="feature">Fast Charging</div>
-      <div class="feature">Long Range</div>
-      <div class="feature">Smart AI System</div>
-    </div>
-  </section>
+  <p id="result">Range will appear here</p>
 
-  <section class="info">
-    <h2>Built for Tomorrow</h2>
-    <p>
-      Our electric vehicles combine performance, sustainability,
-      and intelligent technology to redefine mobility.
-    </p>
-  </section>
+  <hr />
 
-  <footer>
-    <p>© 2026 Future EV</p>
-  </footer>
+  <button id="themeBtn">Toggle Dark Mode</button>
 
+  <script src="script.js"></script>
 </body>
 </html>
