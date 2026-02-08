@@ -3,19 +3,19 @@ body {
   padding: 20px;
 }
 
-.controls {
-  margin-bottom: 20px;
-}
-
 button {
-  margin-right: 10px;
-  padding: 6px 12px;
+  padding: 10px 16px;
+  margin-bottom: 10px;
   cursor: pointer;
 }
 
-.car {
-  border: 1px solid #ccc;
+#loader {
+  display: none;
+  font-weight: bold;
+}
+
+.card {
+  border: 1px solid #ddd;
   padding: 12px;
-  margin-bottom: 12px;
-  border-radius: 4px;
+  margin-bottom: 10px;
 }

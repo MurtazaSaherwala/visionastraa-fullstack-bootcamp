@@ -1,214 +1,224 @@
+// console.log("Placed an order");
 
-// console.log(cars[0]);
-// console.log(cars[4]); //undefined
+// setTimeout(() => {
+//     console.log("Food arrived");
+// }, 3000);
 
-// let batteryLevels = [90, 80, 60, 40, 20, 30];
+// console.log ("Scrolling Istagram");
 
-// for (let i = 0; i < cars.length; i++) {
-//     console.log(cars[i]);
-// }
+// let data = fetchFromServer(); // imaginary blocking. Not async
+// console.log(data);
 
-// document.addEventListener("DOMContentLoaded", function() {
-//     let cars = ["Tesla", "BMW", "Audi", "Mercedes"];
-//     let list = document.getElementById("carList");
+// fetchFromServer(()=> {
+//     console.log("Data received from server");
+// })
+// console.log("page stil responsive");
+
+// let user;
+// setTimeout(() => {
+//     user = {name: "Alice"};
+
+// }, 2000);
+
+// console.log(user.name);
+
+
+// let orderPromise = new Promise((resolve, reject) => {
+//     console.log("Order Placed!!");
+//     let delivered = true;
+//     setTimeout(() => {
+//         if (delivered){
+//             resolve("Order Delivered");
+//         } else {
+//             reject("Order not delivered");
+//         }
+//     }, 3000);
+// });
+
+// orderPromise.then(message => {
+//     console.log("Notification: " + message);
+// })
+// .catch((error) => {
+//     console.log("Oops: " + error);
+// })
+
+// console.log("Scrolling Instagram...");
+
+// fetch("https://jsonplaceholder.typicode.com/posts")
+// .then(response => response.json())
+// .then(data => {
+//     console.log(data);
+// });
+
+// fetch("https://dummyjson.com/products")
+// .then(res => res.json())
+// .then(dummyData => {
+//     let products = dummyData.products;
+//    
+//     let cheapProducts = products.filter(product => product.price < 5);
+//     console.log(cheapProducts);
+// })
+// .catch(error => {
+//     console.log("Error fetching products: " + error);
+// });
+
+// fetch("https://dummyjson.com/products")
+// .then(res => res.json())
+// .then(dummyData => {
+//     let products = dummyData.products;
+//     let container = document.getElementById("product-container");
+
+//     let cards = products.map(product => {
+//         return `
+//         <div class="feature">
+//             <img src="${product.thumbnail}" alt="${product.title}" />
+//             <h2>${product.title}</h2>
+//             <p>Price: $${product.price}</p>
+
+//         </div>
+//         `;
+//     });
+//     container.innerHTML = cards.join("");
     
-//     if(list){
-//        for (let i = 0; i < cars.length; i++) {
-//             let li = document.createElement("li");
-//             li.innerHTML = cars[i];
-//             list.appendChild(li);
-//          }    
+// })
+// .catch(error => {
+//     console.log("Error fetching products: " + error);
+// });
+
+
+// async function loadEVs() {
+//     try{
+//         let response = await fetch("https://dummyjson.com/products");
+//         let data = await response.json();
+//         console.log(data.products[0].title);
+//     } catch (error){
+//         console.log("Error fetching products: " + error);
 //     }
-// });
-
-
-// let car = {"name":"Audi", "range":500, "price":30000}
-// console.log(car.name);
-// car.price = 35000;
-// console.log(car.price);
-
-// document.getElementById("carName").innerText = car.name;
-// document.getElementById("carRange").innerText = "Range: " + car.range + " km";
-// document.getElementById("carPrice").innerText = "Price: $" + car.price;
-
-
-// let car = {
-//     model : "Nexon Ev",
-//     range : 450,
-//     battery: 90,
-//     fastCharging : true
 // }
+// console.log("Before loading EVs");
+// loadEVs();
+// console.log("After loading EVs");
 
-// function calculateRemainingRange(car){
-//     return (car.range * car.battery)/100;
-// }
+// async function loadEVs() {
+//     let container = document.getElementById("product-container");
+//     container.innerHTML = "<p>Loading products...</p>";
+//     try{
+//         let response = await fetch("https://dummyjson.com/products");
+//         if (!response.ok) {
+//             throw new Error("Network response was not ok: " + response.status);
+//         }
 
-// let remainingRange = calculateRemainingRange(car);
-// console.log("Remaining Range: " + remainingRange + " km");
+//         let data = await response.json();
+//         if (!data || data.products.length === 0) {
+//             container.innerHTML = "<p>No products found.</p>";
+//             return;
+//         }
 
-// let cars = [
-//     {"name":"Audi", "range":500, "price":30000},
-// {"name":"Tesla", "range":550, "price":35000},
-// {"name":"BMW", "range":550, "price":80000},
-// {"name":"Mercedes", "range":300, "price":25000}
-// ]
+//         let products = data.products;
+//         let cheapProducts = products.filter(product => product.price < 6);
+        
+//         if (cheapProducts.length === 0){
+//             container.innerHTML = "<p>No cheap products found.</p>";
+//             return;
+//         }
 
-// document.addEventListener("DOMContentLoaded", function() {
-//     let cars = [
-//         {"name":"Audi", "range":500, "price":30000},
-//         {"name":"Tesla", "range":550, "price":35000},
-//         {"name":"BMW", "range":550, "price":80000},
-//         {"name":"Mercedes", "range":300, "price":25000},
-//         {"name":"Nissan", "range":400, "price":28000}
-//     ]
-//     let container = document.getElementById("cars");
-    
-//     if(container){
-//        for (let i = 0; i < cars.length; i++) {
-//             let carDiv = document.createElement("div");
-//             carDiv.innerHTML = `<h3>${cars[i].name}</h3>
-//             <p>Range: ${cars[i].range} km</p>
-//             <p>Price: $${cars[i].price}</p>`;
+//         let cards = cheapProducts.map(product => {
+//             return `
+//             <div class="feature">
+//                 <img src="${product.thumbnail}" alt="${product.title}" />
+//                 <h2>${product.title}</h2>
+//                 <p>Price: $${product.price}</p>
 
-//             container.appendChild(carDiv);
-//          }    
-//     }
-// });
-
-
-// let vehicles = ['Tesla', 'BMW', 'Audi', 'Mercedes'];
-// let labels = vehicles.map(function(vehicle) {
-//     return "My " + vehicle;
-// });
-// console.log(labels);
-
-// let cars = [
-//     {"name":"Audi", "range":500, "price":30000},
-// {"name":"Tesla", "range":550, "price":35000},
-// {"name":"BMW", "range":550, "price":80000},
-// {"name":"Mercedes", "range":300, "price":25000}
-// ]
-
-// let models = [];
-// for(let i =0; i < cars.length; i++){
-//     models.push(cars[i].name);
-// }
-// console.log(models);
-
-
-// let carModels= cars.map(function(car) {
-//     return car.name;
-// })
-
-// console.log(carModels);
-
-// document.addEventListener("DOMContentLoaded", function() {
-//     let cars = [
-//         {"name":"Audi", "range":500, "price":30000},
-//         {"name":"Tesla", "range":550, "price":35000},
-//         {"name":"BMW", "range":550, "price":80000},
-//         {"name":"Mercedes", "range":300, "price":25000},
-//         {"name":"Nissan", "range":400, "price":28000}
-//     ]
-//     let container = document.getElementById("cars");
-    
-//     if(container){
-//        let carCards = cars.map(function (car) {
-//             return `<div class = "car-card">
-//             <h3>${car.name}</h3>
-//             <p>Range: ${car.range} km</p>
-//             <p>Price: $${car.price}</p>
-//             </div>`;
-//        });
-//         document.getElementById("cars").innerHTML = carCards.join("");
-//     }
-// });
-
-let cars = [
-    { model: "Tesla", range: 500, price: 7000000, type: "Sedan" },
-    { model: "Nexon EV", range: 465, price: 1500000, type: "SUV" },
-    { model: "BMW i4", range: 590, price: 7200000, type: "Sedan" },
-    { model: "MG ZS EV", range: 461, price: 2200000, type: "SUV" }
-];
-
-// let highRangeCars = cars.filter(function (car){
-//     return car.range >= 500;
-// })
-
-// let suvs = cars.filter(function (car){
-//     return car.type === "SUV";
-// })
-
-// let budgetCars = cars.filter(function (car){
-//     return car.price < 2500000;
-// })
-
-// let cards = highRangeCars.map(function (car){
-//     return `<div class = "car-card">
-//             <h3>${car.model}</h3>
-//             <p>Range: ${car.range} km</p>
-//             <p>Price: $${car.price}</p>
-//             </div>`;
-// });
-
-// document.getElementById("cars").innerHTML = 
-// cars
-// .filter(car => car)
-// .map(car => `<div class = "car-card">
-//             <h3>${car.model}</h3>
-//             <p>Range: ${car.range} km</p>
-//             <p>Price: $${car.price}</p>
 //             </div>
-//             `)
-// .join("");
+//             `;
+//         });
+//         container.innerHTML = cards.join("");
 
-
-// let highRangeCars = cars.filter(function (car){
-//     return car.range >= 500;
-// })
-
-// let highRangeCars = cars.filter(car => car.range >= 500);
-
-// `<div class = "car-card">
-//     <h3>${car.model}</h3>
-//     <p>Range: ${car.range} km</p>
-//     <p>Price: $${car.price}</p>
-// </div>`
-
-// "<div class = 'car-card'>"+
-//     "<h3>" + car.model + "</h3>" +
-//     "<p>Range: " + car.range + " km</p>" +
-//     "<p>Price: $" + car.price + "</p>" +
-// "</div>"
-
-// document.getElementById("cars").innerHTML = 
-// cars
-// .filter(car => car)
-// .map(({model, range, price}) => `<div class = "car-card">
-//             <h3>${model}</h3>
-//             <p>Range: ${range} km</p>
-//             <p>Price: $${price}</p>
-//             </div>
-//             `)
-// .join("");
-
-// class Vehicle{
-//     constructor(model, range, price) {
-//         this.model = model;
-//         this.range = range;
-//         this.price = price;
-//         console.log("Vehicle Created");
-//     }
-
-//     getInfo() {
-//         return `Model: ${this.model}, Range: ${this.range} km, Price: $${this.price}`;
+//     } catch (error){
+//         container.innerHTML = "<p>Error fetching products:</p>";
+//         console.log("Error fetching products: " + error);
 //     }
 // }
 
-// let cars = [new Vehicle("Tesla", 500, 7000000),
-// new Vehicle("Nexon EV", 465, 1500000),
-// new Vehicle("BMW i4", 590, 7200000)
-// ];
+// loadEVs();
 
-// console.log(cars[2].getInfo());
 
+// try {
+//     let user = undefined;
+//     console.log(user.name);
+// } catch (error){
+//     console.log("Something went Wrong" + error);
+// }
+
+// async function fetchInvalidEndpoint() {
+//     try {
+//         let res = await fetch("https://dummyjson.com/invalid-endpoint");
+//         console.log(res);
+//         if (!res.ok) {
+//             throw new Error("Network response was not ok: " + res.status);
+//         }
+//         let data = await res.json();
+//         if (!data || data.products.length === 0) {
+//             throw new Error("No products found in response");
+//         }
+//     } catch (error) {
+//         console.log("Error fetching data: " + error);
+//     }
+    
+// }
+
+// fetchInvalidEndpoint();
+ 
+async function loadEVs() {
+    let status = document.getElementById("loader");
+    let container = document.getElementById("product-container");
+
+    status.style.display = "block";
+    container.style.display = "none";
+
+    let response = await fetch("https://dummyjson.com/products");
+    let data = await response.json();
+
+    status.style.display = "none";
+    container.style.display = "block";
+
+    container.innerHTML = "Data loaded successfully!";
+    
+}
+
+loadEVs();
+
+
+let button = document.getElementById("check-btn");
+let statusText = document.getElementById("status-text");
+
+button.addEventListener("click", async () => {
+    button.disabled = true;
+    statusText.innerText = "Checking EV Status..."
+
+    try{
+        let result = await checkEVStatus();
+        statusText.innerText = `EV Status: ${result}`;
+    } catch (error) {
+        statusText.innerText = error;
+    }
+    
+    button.disabled = false;
+    
+});
+
+function checkEVStatus() {
+    return new Promise((resolve , reject) => {
+        setTimeout(() => {
+            let success = Math.random() > 0.2
+            if (success) {
+                let statuses  = ["Available", "Charging", "In Use"];
+                let randomStatus = statuses[Math.floor(Math.random() * statuses.length)];
+                resolve(randomStatus);
+            } else {
+                reject("Failed to fetch EV Status")
+            }
+            
+        }, 3000);
+    });
+}

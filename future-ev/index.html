@@ -2,19 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>EV Catalog</title>
+  <title>EV Dashboard</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <h1>Electric Vehicles</h1>
+  <h1>EV Dashboard</h1>
 
-  <div class="controls">
-    <button id="allBtn">All</button>
-    <button id="highRangeBtn">High Range (&gt; 500km)</button>
-  </div>
+  <button id="check-btn">Check EV Status</button>
+  <p id="status"></p>
 
-  <div id="carList"></div>
+  <div id="loader">Loading data...</div>
+  <div id="ev-container"></div>
 
   <script src="script.js"></script>
 </body>

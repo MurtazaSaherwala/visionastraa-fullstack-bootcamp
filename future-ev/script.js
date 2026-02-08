@@ -1,50 +1,57 @@
-// Vehicle class (blueprint)
-class Vehicle {
-  constructor(model, range, price) {
-    this.model = model;
-    this.range = range;
-    this.price = price;
+const statusText = document.getElementById("status");
+const loader = document.getElementById("loader");
+const container = document.getElementById("ev-container");
+const button = document.getElementById("check-btn");
+
+
+//    Async data fetch function
+
+async function fetchEVs() {
+  const response = await fetch("https://dummyjson.com/products");
+
+  if (!response.ok) {
+    throw new Error("Failed to fetch EV data");
   }
 
-  getInfo() {
-    return `${this.model} offers a range of ${this.range} km`;
-  }
+  const data = await response.json();
+  return data.products;
 }
 
-// Data source (array of objects via class instances)
-const cars = [
-  new Vehicle("Tesla Model 3", 500, 7000000),
-  new Vehicle("Nexon EV", 465, 1500000),
-  new Vehicle("BMW i4", 590, 7200000),
-  new Vehicle("MG ZS EV", 461, 2200000)
-];
 
-const container = document.getElementById("carList");
-const allBtn = document.getElementById("allBtn");
-const highRangeBtn = document.getElementById("highRangeBtn");
+//    UI render function
 
-// Render function (UI comes from data)
-function renderCars(list) {
-  const cards = list.map(car => `
-    <div class="car">
-      <h3>${car.model}</h3>
-      <p>${car.getInfo()}</p>
-      <p>Price: ₹${car.price}</p>
+function renderEVs(evs) {
+  if (evs.length === 0) {
+    container.innerHTML = "<p>No EVs available.</p>";
+    return;
+  }
+
+  const cards = evs.map(ev => `
+    <div class="card">
+      <h3>${ev.title}</h3>
+      <p>₹${ev.price}</p>
     </div>
   `);
 
   container.innerHTML = cards.join("");
 }
 
-// Initial render
-renderCars(cars);
+//    Event + Async Flow
 
-// Event-driven filtering
-highRangeBtn.addEventListener("click", () => {
-  const filtered = cars.filter(car => car.range > 500);
-  renderCars(filtered);
-});
+button.addEventListener("click", async () => {
+  statusText.innerText = "Checking EV status...";
+  loader.style.display = "block";
+  container.innerHTML = "";
+  button.disabled = true;
 
-allBtn.addEventListener("click", () => {
-  renderCars(cars);
+  try {
+    const evs = await fetchEVs();
+    renderEVs(evs);
+    statusText.innerText = "EV data loaded successfully.";
+  } catch (error) {
+    statusText.innerText = error.message;
+  } finally {
+    loader.style.display = "none";
+    button.disabled = false;
+  }
 });
