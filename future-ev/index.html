@@ -2,26 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Day 2 - JavaScript Interactions</title>
+  <title>EV Catalog</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <h2>EV Battery Range Calculator</h2>
+  <h1>Electric Vehicles</h1>
 
-  <input
-    type="number"
-    id="batteryInput"
-    placeholder="Enter battery percentage"
-  />
+  <div class="controls">
+    <button id="allBtn">All</button>
+    <button id="highRangeBtn">High Range (&gt; 500km)</button>
+  </div>
 
-  <button id="calculateBtn">Calculate Range</button>
-
-  <p id="result">Range will appear here</p>
-
-  <hr />
-
-  <button id="themeBtn">Toggle Dark Mode</button>
+  <div id="carList"></div>
 
   <script src="script.js"></script>
 </body>

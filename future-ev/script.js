@@ -1,42 +1,50 @@
-// Element selection
-const batteryInput = document.getElementById("batteryInput");
-const calculateBtn = document.getElementById("calculateBtn");
-const resultText = document.getElementById("result");
-const themeBtn = document.getElementById("themeBtn");
-
-// Logic function
-function getEstimatedRange(batteryPercent) {
-  if (batteryPercent < 0) {
-    return 0;
+// Vehicle class (blueprint)
+class Vehicle {
+  constructor(model, range, price) {
+    this.model = model;
+    this.range = range;
+    this.price = price;
   }
 
-  if (batteryPercent > 100) {
-    return 400;
+  getInfo() {
+    return `${this.model} offers a range of ${this.range} km`;
   }
-
-  return batteryPercent * 4;
 }
 
-// Event: Calculate range
-calculateBtn.addEventListener("click", function () {
-  const batteryValue = batteryInput.value;
+// Data source (array of objects via class instances)
+const cars = [
+  new Vehicle("Tesla Model 3", 500, 7000000),
+  new Vehicle("Nexon EV", 465, 1500000),
+  new Vehicle("BMW i4", 590, 7200000),
+  new Vehicle("MG ZS EV", 461, 2200000)
+];
 
-  if (batteryValue === "") {
-    resultText.textContent = "Please enter battery percentage";
-    return;
-  }
+const container = document.getElementById("carList");
+const allBtn = document.getElementById("allBtn");
+const highRangeBtn = document.getElementById("highRangeBtn");
 
-  const range = getEstimatedRange(batteryValue);
-  resultText.textContent = "Estimated Range: " + range + " km";
+// Render function (UI comes from data)
+function renderCars(list) {
+  const cards = list.map(car => `
+    <div class="car">
+      <h3>${car.model}</h3>
+      <p>${car.getInfo()}</p>
+      <p>Price: ₹${car.price}</p>
+    </div>
+  `);
+
+  container.innerHTML = cards.join("");
+}
+
+// Initial render
+renderCars(cars);
+
+// Event-driven filtering
+highRangeBtn.addEventListener("click", () => {
+  const filtered = cars.filter(car => car.range > 500);
+  renderCars(filtered);
 });
 
-// Event: Toggle dark mode
-themeBtn.addEventListener("click", function () {
-  document.body.classList.toggle("dark-mode");
-
-  if (document.body.classList.contains("dark-mode")) {
-    themeBtn.textContent = "Light Mode";
-  } else {
-    themeBtn.textContent = "Dark Mode";
-  }
+allBtn.addEventListener("click", () => {
+  renderCars(cars);
 });

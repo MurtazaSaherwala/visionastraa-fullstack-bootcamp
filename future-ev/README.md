@@ -1,100 +1,81 @@
-# 📘 Day 2 — JavaScript Fundamentals, Logic & DOM Interactions
+# 📘 Day 3 — Data-Driven UI & Modern JavaScript Foundations
+
+> 🎥 **Lecture Recording / Visual Reference**  
+> Morning: https://www.youtube.com/watch?v=KO1fUtpXa6k
+> Afternoon: https://www.youtube.com/watch?v=d14tEJ_CAqM
 
 ---
 
 ## 🧠 Work Summary
 
-Day 2 focused on introducing **JavaScript as the logic layer of the web** and guiding students from static pages into **interactive, event-driven applications**.
+Day 3 focused on transitioning students from **logic-first JavaScript** to **data-driven application thinking**, which forms the foundation of real-world frontend development.
 
-The day began by establishing **why JavaScript exists**, clearly separating responsibilities between:
+Students moved beyond hard-coded values and static HTML into working with **structured data**, learning how modern applications store, transform, filter, and render information dynamically. A strong emphasis was placed on understanding that **UI is derived from data**, not manually written or copy-pasted.
 
-- **HTML** — structure  
-- **CSS** — presentation  
-- **JavaScript** — behavior & logic  
+Key concepts covered included arrays, objects, arrays of objects, functional methods like `map()` and `filter()`, ES6 syntax improvements, and introductory object-oriented programming using classes and constructors. The day concluded with a guided refactor to demonstrate how **production-quality code evolves over time**.
 
-Students learned how JavaScript runs in the browser, how it reacts to user actions through **events**, and how it controls the page using the **DOM (Document Object Model)**.
-
-Core programming foundations were covered, including:
-- Variables (`let`, `const`)
-- Data types
-- Operators
-- Basic logic
-- Functions  
-
-Strong emphasis was placed on **thinking like a developer**—understanding memory, conditions, decisions, and reusable logic rather than memorizing syntax.
-
-The second half of the day connected JavaScript to the UI through **DOM selection**, **event handling**, and **state changes**. Students built real, confidence-building features such as:
-
-- A **Battery Range Calculator**
-- A **Dark Mode toggle**
-- Interactive UI updates using events
-
-The day concluded with a strong focus on **debugging**, teaching students how to use the browser console, read errors, and treat bugs as **feedback rather than failure**.
+This session intentionally mirrored how frontend engineers think and work in real-world industry environments.
 
 ---
 
 ## 🔗 Reference Links
 
-These resources align directly with the concepts taught on Day 2:
+- **MDN — JavaScript Arrays**  
+  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
 
-- **JavaScript Basics**  
-  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide
+- **MDN — Working with Objects**  
+  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects
 
-- **Variables (`let`, `const`)**  
-  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let  
-  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const
+- **MDN — Array.prototype.map()**  
+  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
 
-- **Functions**  
-  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions
+- **MDN — Array.prototype.filter()**  
+  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
 
-- **DOM Introduction**  
-  https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction
+- **MDN — Classes in JavaScript**  
+  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes
 
-- **DOM Selection**  
-  https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById  
-  https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector
-
-- **Events**  
-  https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
-
-- **Debugging & Console**  
-  https://developer.mozilla.org/en-US/docs/Web/API/console
+- **MDN — Template Literals**  
+  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
 
 ---
 
-## 🎓 Learnings & Outcomes
+## 🎯 Learnings & Outcomes
 
-By the end of Day 2, students developed a strong mental model of **how JavaScript works in the browser** and how real web applications are structured. They learned how to store and manipulate data using variables, apply logic through operators and conditions, and organize behavior using functions.
+By the end of Day 3, students were able to structure application data using arrays and objects, represent real-world entities using classes, and dynamically generate UI elements from data instead of hard-coding HTML.
 
-Students were able to connect JavaScript to HTML via the DOM, respond to user interactions using events, and update the UI dynamically. Most importantly, they gained confidence in building small but real features and learned how to debug their own code using the browser console.
+They learned how to transform and selectively display data using `map()` and `filter()`, write cleaner and more readable ES6-style JavaScript, and refactor working code into more maintainable and scalable structures. Students also developed an understanding of how modern frontend frameworks internally rely on the same core principles introduced during this session.
 
 ---
 
 ## ⚠️ Blockers & Risks
 
-Common challenges students may face after Day 2 include:
+Common challenges and risks identified during Day 3 include:
 
-- Confusing `console.log()` with returning values from functions
-- Forgetting that JavaScript is **event-driven** and does nothing unless triggered
-- Misunderstanding `null` errors due to incorrect DOM selectors
-- Mixing logic directly inside event handlers instead of using functions
-- Typos in IDs or class names causing DOM selection failures
-- Feeling overwhelmed by error messages instead of reading them carefully
+- Confusion between arrays vs objects and when to use each
+- Forgetting to return values inside `map()` or `filter()`
+- Treating UI as the source of truth instead of data
+- Misunderstanding `this` inside classes and constructors
+- Overusing ES6 syntax without understanding intent
+- Difficulty visualizing how data flows into UI
 
-These risks were addressed during the day by reinforcing debugging habits and logical thinking.
+Students are encouraged to focus on **clarity over cleverness** and prioritize readable, maintainable code.
 
 ---
 
-## 🛠 Skills Used
+## 🛠️ Skills Used
 
-- JavaScript fundamentals  
-- Variables and data types  
-- Arithmetic and comparison operators  
-- Boolean logic  
-- Function creation and reuse  
-- DOM understanding and traversal  
-- DOM element selection  
-- Event-driven programming  
-- UI state management via CSS classes  
-- Debugging using browser developer tools  
-- Problem decomposition and logical thinking
+- JavaScript data structures (arrays, objects)
+- Array of objects modeling
+- Iteration and looping concepts
+- Functional programming (`map`, `filter`)
+- Dynamic DOM manipulation
+- ES6 syntax (arrow functions, template literals, destructuring)
+- Object-Oriented Programming (classes, constructors)
+- Code refactoring and structural improvement
+- Developer-style problem decomposition
+
+---
+
+> 💡 **Key Takeaway**  
+> _Good code evolves — it’s not written once._
