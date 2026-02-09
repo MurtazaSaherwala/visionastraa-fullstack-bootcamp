@@ -1,5 +1,11 @@
 # Day 5 — Building a Data-Driven Dashboard with Vanilla JavaScript
 
+## 🎥 Video Lectures
+_Add Day 4 lecture recordings here_
+
+- Morning :  https://www.youtube.com/watch?v=uuACX-tzvAk
+- Afternoon : https://www.youtube.com/watch?v=O6Y32AZCd74
+
 ## Work Summary
 
 Day 5 focused on transitioning students from static and partially interactive pages into **fully state-driven, dashboard-style web applications using Vanilla JavaScript**.
