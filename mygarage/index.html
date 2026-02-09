@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MyGarage Dashboard</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- App Root -->
+  <div class="dashboard">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2 class="logo">MyGarage</h2>
+
+      <nav class="nav">
+        <ul>
+          <li class="active">Dashboard</li>
+          <li>Vehicles</li>
+          <li>Settings</li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Area -->
+    <div class="main-area">
+
+      <!-- Header -->
+      <header class="header">
+        <h1>Dashboard</h1>
+      </header>
+
+      <!-- Content -->
+      <main class="content">
+
+        <!-- DASHBOARD VIEW -->
+        <section id="view-dashboard" class="view">
+          <h3>Overview</h3>
+
+          <div class="stat">
+            <p>Total Vehicles</p>
+            <span id="total-count">0</span>
+          </div>
+        </section>
+
+        <!-- VEHICLES VIEW -->
+        <section id="view-vehicles" class="view hidden">
+          <h3>Vehicle List</h3>
+
+          <!-- Loading Indicator -->
+          <p id="loading-text" class="hidden">
+            Loading vehicles...
+          </p>
+          <form id="add-vehicle-form" class="add-form">
+            <input
+              type="text"
+              id="vehicle-name"
+              placeholder="Vehicle name"
+              required
+            />
+
+            <input
+              type="number"
+              id="vehicle-year"
+              placeholder="Year"
+              required
+            />
+
+            <button type="submit" class="primary-btn">
+              Add Vehicle
+            </button>
+          </form>
+
+
+          <!-- Vehicle List (Rendered by JS) -->
+          <div id="vehicle-list"></div>
+        </section>
+
+        <!-- SETTINGS VIEW -->
+        <section id="view-settings" class="view hidden">
+          <h3>Settings</h3>
+          <p class="muted-text">
+            Settings will be available in a future update.
+          </p>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+
+</body>
+</html>
