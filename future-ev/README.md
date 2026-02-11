@@ -1,5 +1,10 @@
 # Day 1 — HTML & CSS Foundations
 
+## 🎥 Video Lectures
+
+- Morning :  https://www.youtube.com/watch?v=uWZJr5Nmj6w
+- Afternoon : https://www.youtube.com/watch?v=jA-sY8V2QjE
+
 ## 📌 Work Summary
 
 On Day 1, we focused on building a strong foundation in **web development fundamentals**.  
