@@ -2,8 +2,8 @@
 
 ## 🎥 Video Lectures
 
-- Morning :  https://www.youtube.com/watch?v=uWZJr5Nmj6w
-- Afternoon : https://www.youtube.com/watch?v=jA-sY8V2QjE
+- Morning :  https://www.youtube.com/watch?v=1SpWqHPF8Ps
+- Afternoon : https://www.youtube.com/watch?v=sCrSUkKRFac
 
 ---
 
