@@ -1,115 +1,107 @@
-# Day 6 — React Foundations: Components, Props & Data-Driven UI
+# Day 7 — React State Architecture, Effects & Data Fetching
 
 ## 🎥 Video Lectures
-_Add Day 6 lecture recordings here_
 
-- Morning :  https://www.youtube.com/watch?v=8bp_fkdTOdE
-- Afternoon : https://www.youtube.com/watch?v=Hc1D50shP8k
+- Morning :  https://www.youtube.com/watch?v=kPT4NXvpqF4
+- Afternoon : https://www.youtube.com/watch?v=JJgOBpj_xt4
+
 
 ## 🧠 Work Summary
 
-Day 6 marked the transition from vanilla JavaScript DOM manipulation to structured, component-driven UI development using React.
+Day 7 focused on strengthening students' understanding of React’s core architecture: **state-driven UI, re-render cycles, side effects, and real-world data handling**.
 
-The day began with a conceptual shift: understanding why React exists and the limitations of manual DOM updates in traditional JavaScript applications. Students explored how scaling UI with vanilla JS leads to repetitive logic, messy DOM handling, and state synchronization issues.
+The session transitioned students from basic state updates to building structured, production-style React components. Through hands-on exercises, students:
 
-From there, the focus moved to the **React mental model**:
-- Thinking in components instead of pages
-- Understanding component trees
-- Recognizing one-way data flow (parent → child)
+- Built a **Battery Charging Simulator** to deeply understand how state updates trigger re-renders.
+- Implemented **conditional styling and rendering** to make UI dynamically respond to state.
+- Managed **multiple state variables** with clean separation and minimal design.
+- Learned the purpose and behavior of **useEffect**, including execution timing and dependency control.
+- Implemented **data fetching on component mount** using `useEffect + async/await`.
+- Designed and handled **loading and error states** in a professional and scalable way.
+- Reinforced the architectural mental model:  
+  > React = UI as a function of state
 
-Students then set up a modern React development environment using **Vite**, learning how tooling connects `index.html`, `main.jsx`, and `App.jsx`, and how React mounts into the DOM.
-
-Core React concepts were introduced progressively:
-
-- JSX fundamentals and syntax rules
-- Building a first reusable component (`VehicleCard`)
-- Passing data via props
-- Removing hard-coded values
-- Rendering multiple components dynamically using arrays
-- Understanding why `key` exists in list rendering
-- Structuring a React project with proper folder organization
-- Keeping `App.jsx` clean and focused on composition
-
-The day concluded with a comparison between vanilla DOM manipulation and React’s declarative rendering model, reinforcing the shift from manual UI updates to data-driven rendering.
+The day emphasized thinking like a developer — not manipulating the DOM, but managing state intentionally and letting React handle the UI layer.
 
 ---
 
-## 🔗 Reference Links
+## 📚 Reference Links
 
-- React Official Documentation  
-  https://react.dev/
+- React `useState` Documentation  
+  https://react.dev/reference/react/useState
 
-- Vite Documentation  
-  https://vitejs.dev/
+- React `useEffect` Documentation  
+  https://react.dev/reference/react/useEffect
 
-- JSX In-Depth  
-  https://react.dev/learn/writing-markup-with-jsx
+- Conditional Rendering in React  
+  https://react.dev/learn/conditional-rendering
 
-- Components & Props  
-  https://react.dev/learn/passing-props-to-a-component
-
-- Rendering Lists  
+- Lists & Keys in React  
   https://react.dev/learn/rendering-lists
 
-- React Keys Explanation  
-  https://react.dev/learn/rendering-lists#keeping-list-items-in-order-with-key
+- Fetch API (MDN)  
+  https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
 
-- JSONPlaceholder (Dummy API used in activity)  
-  https://jsonplaceholder.typicode.com/
+- Async/Await (MDN)  
+  https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Async_await
 
 ---
 
 ## 🎯 Learnings & Outcomes
 
-By the end of Day 6, students were able to:
+By the end of Day 7, students were able to:
 
-- Explain why React was created and how it differs from manual DOM manipulation.
-- Build reusable functional components using JSX.
-- Pass data from parent to child components using props.
-- Render dynamic UI from arrays using `map()`.
-- Understand and correctly apply the `key` prop.
-- Organize a React project with clean separation between pages and components.
-- Structure a scalable React application instead of placing all logic inside `App.jsx`.
-- Connect a React component to a dummy JSON API and render external data.
+- Explain what triggers a React re-render.
+- Implement and manage multiple state variables cleanly.
+- Use `useEffect` correctly with dependency arrays.
+- Avoid common infinite loop mistakes.
+- Fetch external data using `useEffect` on component mount.
+- Handle loading and error states professionally.
+- Architect UI using the pattern:
+- Data → State → UI
 
-Students moved from static UI building to structured, data-driven React thinking — a foundational industry skill.
+Students now understand that React applications are built around **state transitions**, not manual UI manipulation. They can reason about component execution flow, effect timing, and rendering behavior with clarity.
 
 ---
 
 ## ⚠️ Blockers & Risks
 
-Common challenges observed or expected:
+Common challenges students may encounter:
 
-- Confusion between JavaScript and JSX boundaries (`{}` usage).
-- Forgetting that components must return a single parent element.
-- Attempting to modify props inside a child component.
-- Omitting the `key` prop during list rendering.
-- Overloading `App.jsx` with logic instead of separating pages and components.
-- Fear or misunderstanding around project folder structure.
-- Confusion between DOM manipulation (vanilla JS mindset) and React’s declarative rendering model.
-- Initial discomfort with async data fetching and rendering lists from API responses.
+- Confusing normal variables with state variables.
+- Forgetting dependency arrays or misusing them.
+- Creating infinite loops by updating dependencies inside `useEffect`.
+- Over-storing derived values in state.
+- Not handling loading or error states properly.
+- Mixing rendering logic with side effects.
+- Attempting DOM manipulation instead of relying on state-driven updates.
 
-If not corrected early, messy structure and improper data flow can lead to long-term scalability issues.
+Understanding execution order (Render → Commit → Effect) may take repetition and practice.
 
 ---
 
 ## 🛠 Skills Used
 
-- React Functional Components
-- JSX Syntax & Rules
-- Props & One-Way Data Flow
-- Array `map()` for Dynamic Rendering
-- Understanding and Applying `key` in Lists
-- Component Composition
-- Basic Project Folder Organization
-- Vite Setup & Development Server
-- Declarative UI Thinking
-- Comparing Imperative vs Declarative Approaches
-- Fetching Data from a Dummy JSON API
-- Using `useState` and `useEffect` for Data Handling
+- React functional components
+- `useState` hook
+- `useEffect` hook
+- Dependency array reasoning
+- Conditional rendering (`&&`, ternary operators)
+- Dynamic styling & class assignment
+- Multiple state management
+- Async/await with Fetch API
+- Loading & error state architecture
+- Re-render lifecycle understanding
+- Debugging infinite loop patterns
+- Clean state design principles
 
 ---
 
-Day 6 established the foundational mental model required for scalable frontend development:
+### Core Mental Model Reinforced
 
-> React UI comes from data, not manual DOM manipulation.
+> React = UI as a function of state  
+> When state changes, React re-renders.  
+> Effects run after render.  
+> The dependency array controls execution.
+
+This foundation prepares students for more advanced topics such as controlled inputs, forms, component composition, and larger state architecture.

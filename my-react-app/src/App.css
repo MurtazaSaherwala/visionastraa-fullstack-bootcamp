@@ -41,13 +41,19 @@
   color: #888;
 }
 
-.vehicle-card {
-  border : 1px solid #ccc;
-  padding: 16px;
-  width: 250px;
-  border-radius: 8px;
+.battery-bar {
+  width: 200px;
+  height: 20px;
+  border: 1px solid white;
+  margin-bottom: 20px;
 }
 
-.vehicle-card button {
-  margin-top: 10px;
+.low{
+  color: red;
+}
+.medium{
+  color: orange;
+}
+.high{
+  color: green;
 }
