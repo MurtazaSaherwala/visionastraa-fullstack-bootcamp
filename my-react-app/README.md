@@ -1,5 +1,11 @@
 # Day 6 — React Foundations: Components, Props & Data-Driven UI
 
+## 🎥 Video Lectures
+_Add Day 6 lecture recordings here_
+
+- Morning :  https://www.youtube.com/watch?v=8bp_fkdTOdE
+- Afternoon : https://www.youtube.com/watch?v=Hc1D50shP8k
+
 ## 🧠 Work Summary
 
 Day 6 marked the transition from vanilla JavaScript DOM manipulation to structured, component-driven UI development using React.
