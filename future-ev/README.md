@@ -1,7 +1,6 @@
 # 📘 Day 4 — Asynchronous JavaScript, APIs & Real-World UI Flow
 
 ## 🎥 Video Lectures
-_Add Day 4 lecture recordings here_
 
 - Morning :  https://www.youtube.com/watch?v=0GrxVSp5TbQ
 - Afternoon :  https://www.youtube.com/watch?v=vq_n8RvhPRI
