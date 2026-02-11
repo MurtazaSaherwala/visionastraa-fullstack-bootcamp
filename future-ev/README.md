@@ -1,5 +1,10 @@
 # 📘 Day 2 — JavaScript Fundamentals, Logic & DOM Interactions
 
+## 🎥 Video Lectures
+
+- Morning :  https://www.youtube.com/watch?v=uWZJr5Nmj6w
+- Afternoon : https://www.youtube.com/watch?v=jA-sY8V2QjE
+
 ---
 
 ## 🧠 Work Summary
