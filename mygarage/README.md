@@ -1,7 +1,6 @@
 # Day 5 — Building a Data-Driven Dashboard with Vanilla JavaScript
 
 ## 🎥 Video Lectures
-_Add Day 4 lecture recordings here_
 
 - Morning :  https://www.youtube.com/watch?v=uuACX-tzvAk
 - Afternoon : https://www.youtube.com/watch?v=O6Y32AZCd74
