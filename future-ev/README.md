@@ -1,8 +1,9 @@
 # 📘 Day 3 — Data-Driven UI & Modern JavaScript Foundations
 
-> 🎥 **Lecture Recording / Visual Reference**  
-> Morning: https://www.youtube.com/watch?v=KO1fUtpXa6k
-> Afternoon: https://www.youtube.com/watch?v=d14tEJ_CAqM
+## 🎥 Video Lectures
+
+- Morning :  https://www.youtube.com/watch?v=KO1fUtpXa6k
+- Afternoon : https://www.youtube.com/watch?v=KO1fUtpXa6k
 
 ---
 
